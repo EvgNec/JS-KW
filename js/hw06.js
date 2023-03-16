@@ -1,31 +1,3 @@
-Skip to content
-Search or jump to…
-Pull requests
-Issues
-Codespaces
-Marketplace
-Explore
- 
-@EvgNec 
-simakol
-/
-GoIT74
-Public
-Fork your own copy of simakol/GoIT74
-Code
-Issues
-Pull requests
-Actions
-Projects
-Security
-Insights
-GoIT74/script.js
-@simakol
-simakol lesson-11
-Latest commit 3cc6d6f 1 hour ago
- History
- 1 contributor
-94 lines (71 sloc)  2.47 KB
 
 // const container = document.querySelector("#container")
 // const container = document.getElementById("container")
@@ -114,25 +86,39 @@ const technologies = ["HTML", "CSS", "JavaScript", "React", "Node"];
 // document.body.appendChild(fragment);
 
 //! ====================================================
+// Example1
+// ==============================================
+// const technologies = ["HTML1", "CSS1", "JavaScript1", "React1", "Node1"];
+// const listEL = document.createElement("ul");
+// for (const technology of technologies) {
+//     const liEl = document.createElement("li");
+//     liEl.textContent = technology;
+//     listEL.appendChild(liEl);
+// }
+// document.body.appendChild(listEL);
 
+// for (const technology of technologies) {
+//     const liEl = document.createElement("li");
+//     const text = document.createTextNode(technology);
+//     liEl.appendChild(text);
+//     listEL.appendChild(liEl);
+// }
+// document.body.appendChild(listEL);
+// console.log("listEL", listEL)
+
+// =================== map ===========================
+// const markup = `<ul>${technologies.map(technology => `<li>${technology}<li>`).join("")}</ul>`
+// document.body.insertAdjacentHTML("afterbegin", markup);
+
+//  =================== reduce ===========================
+// const markup = `<ul>${technologies.reduce(
+//     (acc, technology) => (acc += `<li>${technology}</li>`), "")
+//     }</ul>`
+
+//     document.body.insertAdjacentHTML("afterbegin", markup);
 const liItem = document.querySelectorAll(".item")
 
 liItem.forEach(el => {
     console.log(el.firstElementChild.textContent)
     console.log(el.lastElementChild.children.length)
 })
-Footer
-© 2023 GitHub, Inc.
-Footer navigation
-Terms
-Privacy
-Security
-Status
-Docs
-Contact GitHub
-Pricing
-API
-Training
-Blog
-About
-GoIT74/script.js at lesson-11 · simakol/GoIT74
